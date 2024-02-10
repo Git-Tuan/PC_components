@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Component Selection</title>
+  <script>
+    function calculateTotal() {
+      var cpuPrice = document.getElementById("cpu").value;
+      var motherboardPrice = document.getElementById("motherboard").value;
+      var gpuPrice = document.getElementById("gpu").value;
+      var psuPrice = document.getElementById("psu").value;
+      var ramPrice = document.getElementById("ram").value;
+      var ssdPrice = document.getElementById("ssd").value;
+
+      var total = parseInt(cpuPrice) + parseInt(motherboardPrice) + parseInt(gpuPrice) + parseInt(psuPrice) + parseInt(ramPrice) + parseInt(ssdPrice);
+
+      document.getElementById("total").innerHTML = "Total Price: " + total + " рублей";
+    }
+  </script>
+</head>
+<body>
+  <h1>PC Component Selection</h1>
+  <div>
+    <label for="cpu">CPU:</label>
+    <select id="cpu">
+      <option value="15000">Amd Ryzen 5600x</option>
+      <option value="24000">Amd Ryzen 5800x</option>
+      <option value="65000">Amd Ryzen 5950x</option>
+      <!-- Add other CPU options here -->
+    </select>
+  </div>
+  <div>
+    <label for="motherboard">Motherboard:</label>
+    <select id="motherboard">
+      <option value="30000">ASUS Rog strix AM5, tier 1</option>
+      <option value="55000">ASUS Rog strix AM5, tier 0</option>
+      <!-- Add other motherboard options here -->
+    </select>
+  </div>
+  <div>
+    <label for="gpu">Video Card:</label>
+    <select id="gpu">
+      <option value="25000">GeForce RTX 3060</option>
+      <option value="30000">GeForce RTX 3060 Ti</option>
+      <!-- Add other GPU options here -->
+    </select>
+  </div>
+  <div>
+    <label for="psu">Power Supply Unit:</label>
+    <select id="psu">
+      <option value="7000">650w tier3</option>
+      <option value="10000">850w tier2</option>
+      <option value="12000">1000w tier1</option>
+      <option value="16000">1200w tier0</option>
+      <!-- Add other PSU options here -->
+    </select>
+  </div>
+  <div>
+    <label for="ram">Amount of RAM:</label>
+    <select id="ram">
+      <option value="10000">16GB</option>
+      <option value="14000">32GB</option>
+      <!-- Add other RAM options here -->
+    </select>
+  </div>
+  <div>
+    <label for="ssd">SSD:</label>
+    <select id="ssd">
+      <option value="5000">500gb</option>
+      <option value="9000">1tb</option>
+      <!-- Add other SSD options here -->
+    </select>
+  </div>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <div id="total"></div>
+</body>
+</html>
